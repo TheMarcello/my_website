@@ -1,6 +1,6 @@
 
-.body {
-    font-family: Arial, Helvetica, sans-serif;
+body {
+    font-family: sans-serif;
     /* animated shifting background with color gradient */
     background: linear-gradient(-30deg, rgb(210 210 246), rgb(133, 133, 221));
     background-size: 400% 400%;
@@ -8,8 +8,35 @@
     height: 125hv;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    /* margin-top: 40px; /* same as the navigation bar height*/
+    margin-top: 60px; /* same as the navigation bar height */
     padding: 30px;
+}
+
+header { 
+    background-color: rgba(255, 255, 255, .5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 0 20px 0 black;
+    
+}
+
+/* the asterisk '*' means all elemenents inside header */
+header * {
+    display: inline;
+}
+
+header li {
+    margin: 20px
+}
+
+header li a {
+    color: black;
+    text-decoration: none;
 }
 
 .title {
@@ -17,6 +44,9 @@
     margin-top: 60px;
 }
 
+main {
+    color: white;
+}
 
 @keyframes gradient {
     0% {
