@@ -48,6 +48,24 @@ main {
     color: white;
 }
 
+ul.carousel {
+    width: 90vw;
+    height: 300px;
+    padding: 0px;
+    display: flex;
+    gap: 4vw;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+}
+
+ul.carousel li {
+    list-style-type: none;
+    background-color: #eeeeee;
+    border: 1px solid #dddddd;
+    padding: 20px;
+    flex: 0 0 100%;
+}
+
 @keyframes gradient {
     0% {
         background-position: 0% 50%;
