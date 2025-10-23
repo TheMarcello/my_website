@@ -1,12 +1,15 @@
 Website ideas/content
 - paper cat thingy
-  - make small video rotating the 3D model?
+  - make small video rotating the 3D model? (screen record of blender, not rendered)
   - 
-- asian dragon cat thingy
-  -
+- asian dragon paper thingy
+  - 
 __________
 top header
 __________
 
 
 scrollable cards
+
+
+maybe I should make an empty page template for the project

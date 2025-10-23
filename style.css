@@ -6,12 +6,13 @@
 body {
   font-family: sans-serif;
   /* animated shifting background with color gradient */
-  background: linear-gradient(-30deg, rgb(210 210 246), rgb(119, 119, 232));
+  background: linear-gradient(-30deg, rgb(132, 132, 232), rgb(131, 131, 232));
   background-size: 400% 400%;
   animation: gradient 15s ease infinite;
-  height: 125hv;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  
+  height: 125hv;
   margin: 0; /* the body did not have margin zero by default*/
   margin-top: 80px; /* a bit more than the navigation bar height */
   margin-bottom: 80px;
