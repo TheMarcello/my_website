@@ -90,12 +90,6 @@ ul.carousel::-webkit-scrollbar {
   display: none;
 }
 
-ul.carousel::scroll-button(right) {
-  content: ">";
-  height: 60px;
-  width: 60px;
-}
-
 ul.carousel li {
   list-style-type: none;
 }
