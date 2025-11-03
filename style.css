@@ -1,7 +1,10 @@
-/* html {
-  height: 100%;
+/* remove default margin */
+/* font: inherit resets all fonts (so h2,h3 have to be manuall set) */
+* {
   margin: 0;
-} */
+  padding: 0;
+  font: inherit;
+}
 
 body {
   font-family: sans-serif;
@@ -11,12 +14,8 @@ body {
   animation: gradient 15s ease infinite;
   background-repeat: no-repeat;
   background-attachment: fixed;
-
-  height: 125hv;
-  margin: 0; /* the body did not have margin zero by default*/
-  margin-top: 80px; /* a bit more than the navigation bar height */
-  margin-bottom: 80px;
-  padding: 0px;
+  height: 100%;
+  overflow: hidden; /* there was a weird vertical scroll */
 }
 
 header {
@@ -25,24 +24,25 @@ header {
   top: 0;
   left: 0;
   right: 0;
-  height: 60px;
+  height: 4rem;
   margin: 0;
   display: inline-flex;
   justify-content: space-between;
-  box-shadow: 0 0 20px 0 black;
+  box-shadow: 0 0 1.5rem 0 black;
+  z-index: 10;
 }
 
 /* the asterisk '*' means all elemenents inside header */
 header * {
   color: white;
   display: inline-flex;
-  padding: 0px;
+  padding: 0;
   align-items: center;
 }
 
 header li {
-  margin-left: 20px;
-  margin-right: 20px;
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
 }
 
 header a {
@@ -52,35 +52,47 @@ header a {
 
 nav {
   float: right;
-  height: 60px;
+  height: 4rem;
 }
 
 .name_in_nav {
-  margin-left: 20px;
+  margin-left: 1.5rem;
 }
 
 main {
+  height: 100vh;
   color: white;
+  display: flex;
+  position: fixed;
+}
+
+.content {
+  width: calc(100dvw - 400px);
+  height: 100vh;
+  height: 100dvh;
+  margin: 2rem;
 }
 
 /* carousel box */
 .carousel_container {
-  margin: 0px;
+  margin: 0;
+  margin-left: 5rem;
   padding: 0px;
-  width: 100%;
-  height: 120vh;
+  width: 400px;
+  height: 100vh;
+  height: 100dvh;
 }
 
 ul.carousel {
   width: 100%;
-  height: 50%;
+  height: 100%;
   padding: 0;
-  margin-top: 30px;
-  display: flex;
-  gap: 30px;
-  overflow-x: auto;
+  margin: 0;
+  /* display: block; */
+  /* gap: 1.5rem; */
+  overflow-y: auto;
   /* overflow-y: hidden; */
-  scroll-snap-type: x mandatory;
+  /* scroll-snap-type: y mandatory; */
   scroll-behavior: smooth;
   scrollbar-width: none; /* remove scrollbar for Firefox */
 }
@@ -95,14 +107,19 @@ ul.carousel li {
 }
 
 .carousel_page {
-  scroll-snap-align: start;
+  /* scroll-snap-align: start; */
   width: 400px;
-  height: 98%; /* less than 100% to avoid annoying vertical scrollbar*/
+  height: 400px;
   list-style-type: none;
-  background-color: #eeeeee;
   /* border: 0px solid #000000; */
-  /* padding: 20px; */
   flex: 0 0 auto;
+}
+
+/* This should go after .carousel_page because it's modifying it */
+.first_page {
+  height: 200px;
+  align-content: end;
+  text-align: center;
 }
 
 ul.carousel img {
