@@ -9,18 +9,24 @@
       type="image/x-icon"
       href="Content/donut_icon (32x32).ico"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend+Exa&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
   </head>
 
   <body class="body">
     <!-- navigation bar -->
     <header>
-      <div class="name_in_nav">
+      <div class="name_in_head fw-bold">
         <a href="#">Marcello Pozzessere</a>
       </div>
       <div class="nav_bar_container">
-        <nav>
-          <ul class="nav_bar">
+        <nav role="list">
+          <ul class="nav_list">
             <li><a href="#">Home</a></li>
             <li><a href="Pages/blender.html">About</a></li>
             <li><a href="Pages/contact_me.html">Contact me</a></li>
@@ -32,25 +38,27 @@
     <main>
       <!-- first row of carousel -->
       <div class="carousel_container">
-        <ul class="carousel">
+        <ul class="carousel" role="list">
           <li>
             <div class="carousel_page first_page">
-              <p>These are my personal projects</p>
+              <p class="intro_projects">Personal projects</p>
             </div>
           </li>
           <li>
             <div class="carousel_page">
-              <img
-                src="Content/donut_screenshot_2.png"
-                alt="Image of a pink 3D donut, realized with Blender"
-              />
+              <a href="Pages/blender.html">
+                <img
+                  src="Content/donut_single_square_frame.png"
+                  alt="Computer generated image of a pink 3D donut, realized with Blender"
+                />
+              </a>
             </div>
           </li>
           <li>
             <div class="carousel_page">
               <img
                 src="Content/paper_dragon_2.png"
-                alt="Image of a low poly dragon in a frame on a wall, realized with Blender"
+                alt="Computer generated image of a low poly dragon in a frame on a wall, realized with Blender"
               />
             </div>
           </li>
@@ -58,7 +66,7 @@
             <div class="carousel_page">
               <img
                 src="Content/sword_screenshot.png"
-                alt="Image of a flaming sword inside a rock, realized with Blender"
+                alt="Computer generated image of a flaming sword inside a rock, realized with Blender"
               />
             </div>
           </li>
@@ -74,7 +82,7 @@
             <div class="carousel_page">
               <img
                 src="Content/render_on_table.png"
-                alt="Image a yellow and orange papercraft mushroom"
+                alt="Computer generated image of a black papercraft cat"
               />
             </div>
           </li>
