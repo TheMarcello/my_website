@@ -177,6 +177,18 @@ ul.carousel img {
   object-fit: cover;
 }
 
+.project_page {
+  margin: 2rem;
+  margin-top: calc(var(--nav-bar-height) + 2rem);
+}
+
+.two_columns {
+  display: flex;
+}
+
+.picture_column img {
+  width: 300px;
+}
 @keyframes gradient {
   0% {
     background-position: 0% 50%;
