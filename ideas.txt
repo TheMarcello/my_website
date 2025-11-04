@@ -13,3 +13,9 @@ scrollable cards
 
 
 maybe I should make an empty page template for the project
+
+hover over the images and trigger a short description, while the images become more transparent
+maybe I have to make it into "hold" for mobile?
+maybe I can just check if there's "hover", otherwise make it always visible
+
+
