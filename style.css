@@ -46,8 +46,8 @@
   margin: 0;
   padding: 0;
   font: inherit;
-  border: 1px solid;
-  border-color: red;
+  /* border: 1px solid;
+  border-color: red; */
 }
 
 body {
@@ -191,8 +191,8 @@ ul.carousel img {
 }
 
 .page_caption {
-  margin: 1rem;
   margin-bottom: 2rem;
+  padding: 1rem;
   position: relative;
   font-size: var(--font-size-highlight);
   z-index: 4;
