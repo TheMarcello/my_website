@@ -2,7 +2,8 @@
   --color-accent-400: rgb(8, 11, 77);
   --color-accent-100: rgb(255, 255, 255);
 
-  --color-background-300: rgb(11, 11, 115);
+  --color-background-900: rgb(0, 0, 0);
+  --color-background-300: rgb(72, 72, 171);
   --color-background-100: rgb(89, 89, 229);
 
   --font-family-primary: "Lexend Exa", sans-serif;
@@ -23,17 +24,18 @@
 
   --font-size-body: var(--font-size-300);
   --font-size-nav: var(--font-size-400);
+  --font-size-heading: var(var(--font-size-700));
 
   --nav-bar-height: 4rem;
   --scroll-picture-width: 400px;
 }
 
-@media (min-width: 900px) {
+/* @media (max-width: 900px) {
   :root {
     --font-size-body: var(--font-size-400);
     --font-size-nav: var(--font-size-500);
   }
-}
+} */
 
 /* remove default margin */
 /* font: inherit resets all fonts (so h2,h3 have to be manuall set) */
@@ -41,6 +43,8 @@
   margin: 0;
   padding: 0;
   font: inherit;
+  border: 1px solid;
+  border-color: red;
 }
 
 body {
@@ -116,13 +120,15 @@ main {
   height: 100dvh;
   margin-top: var(--nav-bar-height);
   align-content: top;
-  overflow: hidden;
+  overflow: auto;
+  scroll-behavior: smooth;
+  /* padding-bottom: 10rem; */
 }
 
 /* carousel box */
 .carousel_container {
   margin: 0;
-  margin-left: 8rem;
+  margin-left: 6rem;
   padding: 0px;
   width: var(--scroll-picture-width);
   height: 100vh;
@@ -153,34 +159,43 @@ ul.carousel li {
 }
 
 .carousel_page {
-  /* scroll-snap-align: start; */
+  position: relative;
   width: var(--scroll-picture-width);
   height: var(--scroll-picture-width);
   list-style-type: none;
-  /* border: 0px solid #000000; */
   flex: 0 0 auto;
+  background-color: var(--color-background-900);
+  z-index: 1;
 }
-
 /* This should go after .carousel_page because it's modifying it */
 .first_page {
   height: 200px;
   align-content: end;
   text-align: center;
-}
-
-.intro_projects {
-  margin: 2rem;
+  background-color: transparent;
 }
 
 ul.carousel img {
+  position: absolute;
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: 0.3s;
+  z-index: 5;
 }
 
-.project_page {
-  margin: 2rem;
-  margin-top: calc(var(--nav-bar-height) + 2rem);
+@media (hover: hover) {
+  ul.carousel img:hover {
+    opacity: 0.5;
+    z-index: 3;
+  }
+}
+
+.page_caption {
+  margin: 1rem;
+  margin-bottom: 2rem;
+  position: relative;
+  z-index: 4;
 }
 
 .two_columns {
@@ -191,7 +206,8 @@ ul.carousel img {
   width: 300px;
 }
 
-.snippet { /* code snippet */
+.snippet {
+  /* code snippet */
   font-family: monospace;
 }
 
@@ -201,6 +217,40 @@ ul.carousel img {
 
 .text_link {
   color: var(--color-accent-100);
+}
+
+.project_description {
+  justify-content: center;
+  display: none;
+  margin-bottom: 4rem;
+}
+.project_description:target {
+  display: block;
+}
+.home_page {
+  display: block;
+}
+/* I don't know what's the difference with: */
+/* :target ~ .home_page */
+.project_description:target ~ .home_page {
+  /* hide home page once something is selected */
+  display: none;
+}
+
+.project_description p {
+  margin: 2rem;
+}
+.project_description video {
+  width: 80%;
+  min-width: 400px;
+  height: auto;
+  max-height: 80dvh;
+}
+
+.video_container {
+  /* to align it, hopefully*/
+  /* align-content: center; */
+  text-align: center;
 }
 
 /* custom classe so I can assign properties easily */
@@ -215,8 +265,6 @@ ul.carousel img {
 .fw-bold {
   font-weight: var(--font-weight-bold);
 }
-
-
 
 @keyframes gradient {
   0% {

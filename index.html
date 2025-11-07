@@ -43,25 +43,28 @@
         <ul class="carousel" role="list">
           <li>
             <div class="carousel_page first_page">
-              <p class="intro_projects">Personal projects</p>
+              <p class="page_caption">Personal projects</p>
             </div>
           </li>
           <li>
             <div class="carousel_page">
-              <a href="Pages/blender.html">
+              <a href="#donut_blender">
                 <img
                   src="Content/donut_single_square_frame.png"
                   alt="Computer generated image of a pink 3D donut, realized with Blender"
                 />
               </a>
+              <p class="page_caption">My first Blender project: a 3D donut</p>
             </div>
           </li>
           <li>
             <div class="carousel_page">
-              <img
-                src="Content/paper_dragon_2.png"
-                alt="Computer generated image of a low poly dragon in a frame on a wall, realized with Blender"
-              />
+              <a href="#paper_dragon">
+                <img
+                  src="Content/paper_dragon_2.png"
+                  alt="Computer generated image of a low poly dragon in a frame on a wall, realized with Blender"
+                />
+              </a>
             </div>
           </li>
           <li>
@@ -88,14 +91,51 @@
               />
             </div>
           </li>
-          <li><div class="carousel_page">Page 5</div></li>
-          <li><div class="carousel_page">Page 6</div></li>
+          <!-- <li><div class="carousel_page">Page 5</div></li>
+          <li><div class="carousel_page">Page 6</div></li> -->
         </ul>
       </div>
       <div class="content">
-          <div class="long_text">
-            This is where I will put all the rest of the content
+        <!-- these are going to be the pages for each project -->
+        <div id="donut_blender" class="project_description long_text">
+          <p>
+            My very first Blender project! (What is Blender?) Created following
+            a tutorial of the great
+            <a
+              target="_blank"
+              href="https://www.youtube.com/watch?v=nIoXOplUvAw&list=PLjEaoINr3zgFX8ZsChQVQsuDSjEqdWMAD&index=1"
+              class="text_link fw-bold"
+              >Blender Guru</a
+            >.
+          </p>
+          <p>
+            I learned the basics concepts of Blender: the UI, Object/Edit modes,
+            camera, lighting, modifiers, geometry nodes, textures, keyframes and
+            animations.
+          </p>
+          <div class="video_container">
+            <video
+              src="Content/final_video_donut_screenshot0001-0313.mp4"
+              controls
+              muted
+            ></video>
           </div>
+          <p>The final animation:</p>
+          <div class="video_container">
+            <video
+              src="Content/donut_final_animation0001-0300.mp4"
+              controls
+              muted
+            ></video>
+          </div>
+        </div>
+        <div id="paper_dragon" class="project_description long_text">
+          <p>bla bla this should be about the dragon</p>
+        </div>
+        <!-- this is going to be the main page content (has to be later)-->
+        <div id="home_page" class="project_description home_page long_text">
+          This is where I will put all the rest of the content
+        </div>
       </div>
     </main>
   </body>
