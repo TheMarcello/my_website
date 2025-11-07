@@ -1,87 +1,164 @@
-/* html {
-  height: 100%;
-  margin: 0;
+:root {
+  --color-accent-400: rgb(8, 11, 77);
+  --color-accent-100: rgb(255, 255, 255);
+
+  --color-background-900: rgb(0, 0, 0);
+  --color-background-300: rgb(72, 72, 171);
+  --color-background-100: rgb(89, 89, 229);
+
+  --font-family-primary: "Lexend Exa", sans-serif;
+
+  /* this is just so I can change the font easily */
+  --font-family-body: var(--font-family-primary);
+  --font-family-heading: var(--font-family-primary);
+
+  --font-weight-regular: 400;
+  --font-weight-semi-bold: 500;
+  --font-weight-bold: 700;
+
+  --font-size-300: 0.875rem;
+  --font-size-400: 1rem;
+  --font-size-500: 1.25;
+  --font-size-600: 1.5rem;
+  --font-size-700: 2rem;
+  --font-size-800: 2.5rem;
+
+  --font-size-body: var(--font-size-400);
+  --font-size-nav: var(--font-size-500);
+  --font-size-highlight: var(--font-size-600);
+  --font-size-heading: var(--font-size-800);
+
+  --nav-bar-height: 4rem;
+  --scroll-picture-width: 400px;
+  --left-margin: 6rem;
+}
+
+/* @media (max-width: 900px) {
+  :root {
+    --font-size-body: var(--font-size-400);
+    --font-size-nav: var(--font-size-500);
+  }
 } */
 
+/* remove default margin */
+/* font: inherit resets all fonts (so h2,h3 have to be manuall set) */
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+  border: 1px solid;
+  border-color: red;
+}
+
 body {
-  font-family: sans-serif;
+  font-family: var(--font-family-body);
+  font-size: var(--font-size-body);
   /* animated shifting background with color gradient */
-  background: linear-gradient(-30deg, rgb(132, 132, 232), rgb(131, 131, 232));
+  background: linear-gradient(
+    -30deg,
+    var(--color-background-100),
+    var(--color-background-300)
+  );
   background-size: 400% 400%;
-  animation: gradient 15s ease infinite;
+  /* animation: gradient 15s ease infinite; */
   background-repeat: no-repeat;
   background-attachment: fixed;
-  
-  height: 125hv;
-  margin: 0; /* the body did not have margin zero by default*/
-  margin-top: 80px; /* a bit more than the navigation bar height */
-  margin-bottom: 80px;
-  padding: 0px;
+  height: 100%;
+  overflow: hidden; /* there was a weird vertical scroll */
 }
 
 header {
+  font-family: var(--font-family-heading);
+  font-size: var(--font-size-nav);
   background-color: rgba(0, 0, 0, 0.5);
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  height: 60px;
+  height: var(--nav-bar-height);
   margin: 0;
   display: inline-flex;
   justify-content: space-between;
-  box-shadow: 0 0 20px 0 black;
+  box-shadow: 0 0 1.5rem 0 black;
+  z-index: 10;
 }
 
 /* the asterisk '*' means all elemenents inside header */
 header * {
-  color: white;
-
+  color: var(--color-accent-100);
   display: inline-flex;
-  padding: 0px;
+  padding: 0;
   align-items: center;
 }
 
 header li {
-  margin-left: 20px;
-  margin-right: 20px;
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
 }
 
-header li a {
+header a {
+  /* all anchors in header without underline */
   text-decoration: none;
 }
 
 nav {
   float: right;
-  height: 60px;
+  height: var(--nav-bar-height);
 }
 
-.name_in_nav {
-  margin-left: 20px;
+.name_in_head {
+  margin-left: 1.5rem;
 }
 
 main {
-  color: white;
+  height: 100vh;
+  color: var(--color-accent-100);
+  display: flex;
+  position: fixed;
+}
+
+.content {
+  width: calc(100dvw - var(--scroll-picture-width) - var(--left-margin));
+  height: 100vh;
+  height: 100dvh;
+  margin-top: var(--nav-bar-height);
+  align-content: top;
+  overflow: auto;
+  scroll-behavior: smooth;
+  /* padding-bottom: 10rem; */
+}
+
+.full_width {
+  width: 100dvw;
 }
 
 /* carousel box */
 .carousel_container {
-  margin: 0px;
+  margin: 0;
+  margin-left: var(--left-margin);
   padding: 0px;
-  width: 100%;
-  height: 120vh;
+  width: var(--scroll-picture-width);
+  height: 100vh;
+  height: 100dvh;
 }
 
 ul.carousel {
   width: 100%;
-  height: 50%;
+  height: 100%;
   padding: 0;
-  margin-top: 30px;
-  display: flex;
-  gap: 30px;
-  overflow-x: scroll;
+  margin: 0;
+  /* display: block; */
+  /* gap: 1.5rem; */
+  overflow-y: auto;
   /* overflow-y: hidden; */
-  scroll-snap-type: x mandatory;
+  /* scroll-snap-type: y mandatory; */
   scroll-behavior: smooth;
+  scrollbar-width: none; /* remove scrollbar for Firefox */
+}
+
+/* remove scrollbar for Chrome */
+ul.carousel::-webkit-scrollbar {
+  display: none;
 }
 
 ul.carousel li {
@@ -89,21 +166,105 @@ ul.carousel li {
 }
 
 .carousel_page {
-  width: 400px;
-  height: 98%; /* less than 100% to avoid annoying vertical scrollbar*/
+  position: relative;
+  width: var(--scroll-picture-width);
+  height: var(--scroll-picture-width);
   list-style-type: none;
-  background-color: #eeeeee;
-  /* border: 0px solid #000000; */
-  /* padding: 20px; */
   flex: 0 0 auto;
+  background-color: var(--color-background-900);
+  z-index: 1;
+}
+/* This should go after .carousel_page because it's modifying it */
+.first_page {
+  height: 180px;
+  align-content: end;
+  background-color: transparent;
 }
 
 ul.carousel img {
+  position: absolute;
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: 0.3s;
+  z-index: 5;
 }
 
+.page_caption {
+  margin: 1rem;
+  margin-bottom: 2rem;
+  position: relative;
+  font-size: var(--font-size-highlight);
+  z-index: 4;
+  pointer-events: none;
+}
+
+.two_columns {
+  display: flex;
+}
+
+.picture_column img {
+  width: 300px;
+}
+
+.snippet {
+  /* code snippet */
+  font-family: monospace;
+}
+
+.margin_text {
+  margin: 2rem;
+}
+
+.text_link {
+  color: var(--color-accent-100);
+}
+
+.project_description {
+  justify-content: center;
+  display: none;
+  margin-bottom: 4rem;
+  padding: 2rem;
+}
+.project_description:target {
+  display: block;
+}
+.home_page {
+  display: block;
+}
+/* I don't know what's the difference with: */
+/* :target ~ .home_page */
+.project_description:target ~ .home_page {
+  /* hide home page once something is selected */
+  display: none;
+}
+
+/* .project_description p {
+  margin: 2rem;
+} */
+.project_description video {
+  width: 80%;
+  min-width: 400px;
+  height: auto;
+  max-height: 80dvh;
+}
+
+.center_align {
+  text-align: center;
+}
+/* custom classe so I can assign properties easily */
+.fw-regular {
+  font-weight: var(--font-weight-regular);
+}
+.fw-semi-bold {
+  font-weight: var(--font-weight-semi-bold);
+}
+.fw-bold {
+  font-weight: var(--font-weight-bold);
+}
+.fs-large {
+  font-size: var(--font-size-heading);
+}
 @keyframes gradient {
   0% {
     background-position: 0% 50%;
@@ -113,5 +274,19 @@ ul.carousel img {
   }
   100% {
     background-position: 0% 50%;
+  }
+}
+
+/* to reduce the animations */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+}
+/* hover effect  */
+@media (hover: hover) {
+  ul.carousel img:hover {
+    opacity: 0.5;
+    z-index: 3;
   }
 }
