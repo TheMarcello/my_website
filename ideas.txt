@@ -17,6 +17,4 @@ maybe I should make an empty page template for the project
 hover over the images and trigger a short description, while the images become more transparent
 I should just do over ONLY for desktop (media query)
 maybe I can just check if there's "hover", otherwise make it always visible
-
-
-
+should I ise

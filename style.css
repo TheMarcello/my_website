@@ -26,7 +26,7 @@
   --font-size-body: var(--font-size-400);
   --font-size-nav: var(--font-size-500);
   --font-size-highlight: var(--font-size-600);
-  --font-size-heading: var(--font-size-700);
+  --font-size-heading: var(--font-size-800);
 
   --nav-bar-height: 4rem;
   --scroll-picture-width: 400px;
@@ -176,7 +176,7 @@ ul.carousel li {
 }
 /* This should go after .carousel_page because it's modifying it */
 .first_page {
-  height: 200px;
+  height: 180px;
   align-content: end;
   background-color: transparent;
 }
@@ -194,7 +194,9 @@ ul.carousel img {
   margin: 1rem;
   margin-bottom: 2rem;
   position: relative;
+  font-size: var(--font-size-highlight);
   z-index: 4;
+  pointer-events: none;
 }
 
 .two_columns {
