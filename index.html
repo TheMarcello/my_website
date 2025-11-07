@@ -41,11 +41,13 @@
       <!-- first row of carousel -->
       <div class="carousel_container">
         <ul class="carousel" role="list">
+          <!-- first page -->
           <li>
             <div class="carousel_page first_page center_align">
               <p class="page_caption">Personal projects</p>
             </div>
           </li>
+          <!-- blender donut -->
           <li>
             <div class="carousel_page">
               <a href="#donut_blender">
@@ -57,6 +59,19 @@
               <p class="page_caption">My first Blender project: a 3D donut</p>
             </div>
           </li>
+          <!-- paper cat -->
+          <li>
+            <div class="carousel_page">
+              <a href="#paper_cat">
+                <img
+                  src="Content/render_on_table.png"
+                  alt="Computer generated image of a black papercraft cat"
+                />
+              </a>
+              <p class="page_caption">Papercraft cat</p>
+            </div>
+          </li>
+          <!-- paper dragon -->
           <li>
             <div class="carousel_page">
               <a href="#paper_dragon">
@@ -65,38 +80,51 @@
                   alt="Computer generated image of a low poly dragon in a frame on a wall, realized with Blender"
                 />
               </a>
+              <p class="page_caption">Papercraft dragon (to be made)</p>
             </div>
           </li>
+          <!-- flaming sword -->
           <li>
             <div class="carousel_page">
-              <img
-                src="Content/sword_screenshot.png"
-                alt="Computer generated image of a flaming sword inside a rock, realized with Blender"
-              />
+              <a href="#flaming_sword">
+                <img
+                  src="Content/sword_screenshot.png"
+                  alt="Computer generated image of a flaming sword inside a rock, realized with Blender"
+                />
+              </a>
+              <p class="page_caption">Blender flaming sword animation</p>
             </div>
           </li>
+          <!-- paper paddenstoel -->
           <li>
             <div class="carousel_page">
-              <img
-                src="Content/paddenstoel.jpg"
-                alt="Image a yellow and orange papercraft mushroom"
-              />
+              <a href="#paper_paddenstoel">
+                <img
+                  src="Content/paddenstoel.jpg"
+                  alt="Image a yellow and orange papercraft mushroom"
+                />
+              </a>
+              <p class="page_caption">Papercraft mushroom</p>
             </div>
           </li>
-          <li>
+
+          <!-- TEMPLATE ITEM PAGE -->
+          <!-- <li>
             <div class="carousel_page">
-              <img
-                src="Content/render_on_table.png"
-                alt="Computer generated image of a black papercraft cat"
-              />
+              <a href="#new_element">
+                <img
+                  src="Content/my_picture.jpg"
+                  alt="Image a my new project"
+                />
+              </a>
+              <p class="page_caption">Short caption of the new project</p>
             </div>
-          </li>
-          <!-- <li><div class="carousel_page">Page 5</div></li>
-          <li><div class="carousel_page">Page 6</div></li> -->
+          </li> -->
         </ul>
       </div>
+      <!-- these are going to be the pages for each project (order should not matter) -->
       <div class="content">
-        <!-- these are going to be the pages for each project -->
+        <!-- blender donut description -->
         <div id="donut_blender" class="project_description">
           <p class="margin_text">
             My very first Blender project! (What is Blender?) Created following
@@ -129,10 +157,29 @@
             ></video>
           </div>
         </div>
+        <!-- paper dragon description -->
         <div id="paper_dragon" class="project_description">
-          <p>bla bla this should be about the dragon</p>
+          <p class="margin_text">this should be about the paper dragon</p>
         </div>
-        <!-- this is going to be the home page content (has to be later)-->
+        <!-- flaming sword description -->
+        <div id="flaming_sword" class="project_description">
+          <p class="margin_text">this should be about the flaming sword</p>
+        </div>
+        <!-- paper dragon description -->
+        <div id="paper_cat" class="project_description">
+          <p class="margin_text">this should be about the paper cat</p>
+        </div>
+        <!-- paper dragon description -->
+        <div id="paper_paddenstoel" class="project_description">
+          <p class="margin_text">this should be about the paper mushroom</p>
+        </div>
+
+        <!-- new item description -->
+        <!-- <div id="new_item" class="project_description">
+          <p class="margin_text">this should be about the new project</p>
+        </div> -->
+
+        <!-- HOME PAGE content (has to be later)-->
         <div id="home_page" class="project_description home_page center_align">
           <p class="fs-large margin_text">Welcome to my website!</p>
           <p>(work in progress &#128679;)</p>
