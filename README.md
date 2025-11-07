@@ -10,8 +10,7 @@ at https://themarcello.github.io/my_website/
 
 - [x] new branch for deployment?
 - [ ] add pages for the content
-- [ ] add links in the images
+- [x] add links in the images
 - [x] make new icon?
-- [ ] about me page
-- [ ] hover effect on the project pictures
-
+- [x] about me page
+- [x] hover effect on the project pictures
