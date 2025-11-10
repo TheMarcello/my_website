@@ -46,8 +46,8 @@
   margin: 0;
   padding: 0;
   font: inherit;
-  /* border: 1px solid;
-  border-color: red; */
+  border: 1px solid;
+  border-color: red;
 }
 
 body {
@@ -225,9 +225,14 @@ ul.carousel img {
   display: none;
   margin-bottom: 4rem;
   padding: 2rem;
+  /* height: 0px;
+  transition:
+    height 3s,
+    display 3s allow-discrete; */
 }
 .project_description:target {
   display: block;
+  /* height: 100%; */
 }
 .home_page {
   display: block;
@@ -238,10 +243,12 @@ ul.carousel img {
   /* hide home page once something is selected */
   display: none;
 }
-
-/* .project_description p {
-  margin: 2rem;
+/* @starting-style {
+  .project_description {
+    opacity: 0;
+  }
 } */
+
 .project_description video {
   width: 80%;
   min-width: 400px;
@@ -285,8 +292,35 @@ ul.carousel img {
 }
 /* hover effect  */
 @media (hover: hover) {
-  ul.carousel img:hover {
+  /* adding :focus, not sure it's working */
+  ul.carousel img:hover, img:focus {
     opacity: 0.5;
     z-index: 3;
+  }
+}
+/* adapting for mobile */
+@media (max-width:1000px) {
+  main {
+    display: block;
+    overflow-y: auto;
+  }
+  .carousel_container {
+    margin-left: 0;
+    margin-top: calc(var(--nav-bar-height) + 3rem);
+    width: 100dvw;
+    height: var(--scroll-picture-width);
+  }
+  /* display: flex, to make the carousel horizontal */
+  ul.carousel {
+    overflow-x: auto;
+    overflow-y: hidden;
+    display: flex;
+  }
+  .first_page {
+    width: 180px;
+  }
+  .content {
+    width: 100dvw;
+    height: auto;
   }
 }
