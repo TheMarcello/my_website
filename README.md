@@ -8,7 +8,7 @@ at https://themarcello.github.io/my_website/
 
 ## TODO:
 
-- [ ] hover effect on the navbar
+- [x] hover effect on the navbar
 - [ ] robot.txt
 - [ ] group together papercraft
 - [ ] university projects
