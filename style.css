@@ -48,19 +48,15 @@
   margin: 0;
   padding: 0;
   font: inherit;
-  /* border: 1px solid;
-  border-color: red; */
+  border: 1px solid;
+  border-color: red;
 }
 
 body {
   font-family: var(--font-family-body);
   font-size: var(--font-size-body);
   /* animated shifting background with color gradient */
-  background: linear-gradient(
-    -30deg,
-    var(--color-background-100),
-    var(--color-background-300)
-  );
+  background: linear-gradient(-30deg, var(--color-background-100), var(--color-background-300));
   background-size: 400% 400%;
   /* animation: gradient 15s ease infinite; */
   background-repeat: no-repeat;
@@ -128,19 +124,33 @@ main {
 
 .top_button {
   position: fixed;
-  bottom: 3rem;
-  right: 3rem;
+  bottom: 2rem;
+  right: 2rem;
+  width: 4rem;
+  height: 4rem;
   text-decoration: none;
-  background-color: white;
+  background-color: transparent;
   opacity: 0.5;
-  text-shadow: 0 0 3px black;
-  border-radius: 0.5rem;
+  /* text-shadow: 0 0 3px black; */
+  /* border-radius: 0.5rem; */
   z-index: 10;
   transition: var(--hover-transition);
 }
 .top_button:hover {
   opacity: 1;
-  text-shadow: 0 0 5px black;
+  /* text-shadow: 0 0 5px black; */
+}
+.top_button_svg {
+  transform: scale(.3);
+  fill: none;
+  stroke: var(--color-accent-100);
+  stroke-width: 10;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.top_button svg {
+  height: auto;
+  width: auto;
 }
 
 .content {
@@ -287,6 +297,12 @@ ul.carousel img {
 } */
 
 .project_description video {
+  width: 80%;
+  min-width: 400px;
+  height: auto;
+  max-height: 80dvh;
+}
+.project_description img {
   width: 80%;
   min-width: 400px;
   height: auto;

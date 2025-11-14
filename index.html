@@ -29,13 +29,22 @@
         </ul>
       </nav>
     </div>
+
   </header>
   <!-- <h1 class="title">My website</h1> -->
+  <!-- reference to back to the top button -->
+  <!-- <div id="top"></div> -->
   <main>
-    <!-- reference to back to the top button -->
-    <a id="top"></a>
-    <!-- fixed button "back to top" -->
-    <a href="#top" class="top_button">Back up</a>
+    <!-- <button class="top_button" onclick="document.querySelector('.content').scrollTo(0,0)">
+      <img src="./Content/back_to_top_icon.svg" alt="" style="color: white;"></button> -->
+    <!-- svg button -->
+    <button class="top_button" onclick="document.querySelector('.content').scrollTo(0,0)">
+      <svg width="4rem" heigth="4rem" viewBox="0 0 4rem 4rem">
+        <path id="button_svg_path" class="top_button_svg"
+          d="M 175.4831,90.223457 A 84.968857,85.083992 0 0 1 90.514244,175.30745 84.968857,85.083992 0 0 1 5.5453873,90.223457 84.968857,85.083992 0 0 1 90.514244,5.1394653 84.968857,85.083992 0 0 1 175.4831,90.223457 Z M 45.10985,42.812256 c 29.818692,0 59.63738,0 89.45608,0 m -8.04082,69.905514 C 114.30506,97.551757 102.08501,82.385741 89.864953,67.219726 M 53.15067,112.71777 C 65.37072,97.551757 77.590775,82.385741 89.810827,67.219726" />
+      </svg>
+    </button>
+
     <!-- first row of carousel -->
     <div class="carousel_container">
       <ul class="carousel" role="list">
@@ -115,6 +124,7 @@
     </div>
     <!-- these are going to be the pages for each project (order should not matter) -->
     <div class="content">
+
       <!-- blender donut description -->
       <div id="donut_blender" class="project_description">
         <p class="margin_text">
@@ -137,13 +147,14 @@
           <video src="Content/donut_final_animation0001-0300.mp4" controls muted></video>
         </div>
       </div>
+
       <!-- paper cat description -->
       <div id="papercraft" class="project_description">
         <p class="margin_text">
           The origin of these papercrafts was
           <a target="_blank" href="https://www.instructables.com/Create-faceted-paper-objects/" class="text_link">this
-            great post</a>
-          on Instructables.com on how to create a polygonal paper models from scratch (it also
+            post</a>
+          on Instructables.com on how to create polygonal paper models from scratch (it also
           came with a ready-to-print pdf for a deer head trophy).
         </p>
         <p class="margin_text">Starting from a 3D model:</p>
@@ -152,11 +163,31 @@
         </div>
         <p class="margin_text">
           (which can be found on
-          <a href="https://www.thingiverse.com/">Thingiverse</a> or anywhere else) the amount of
+          <a href="https://www.thingiverse.com/" class="text_link">Thingiverse</a> or anywhere else) the amount of
           polygons has to be reduced to a few hundreds using Meshlab. (In the mean time I learned
           some basics of Blender, so I replaced the (awful) Meshlab part.)
         </p>
+        <div class="center_align">
+          <img src="./Content/low_poly_cat.png" alt="3D model of a sleeping cat with a reduced number of polygons"
+            class="center_align" />
+        </div>
+        <p class="margin_text">(render only for illustration purposes, not necessary)</p>
+        <div class="center_align">
+          <img src="./Content/render_on_table.png"
+            alt="3D render of a sleeping cat with a reduced number of polygons on a wooden table"
+            class="center_align" />
+        </div>
+        <p class="margin_text">Then, using <a href="https://pepakura.tamasoft.co.jp/pepakura_designer/"
+            class="text_link">Pepakura</a>, the
+          model can be unfolded and made into pdf [add downloadable link] to be printed, and finally cut and glued
+          together (which is the hardest and most time consuming part).</p>
+        <div class="center_align">
+          <img src="./Content/paper_cat_crop.jpg"
+            alt="3D render of a sleeping cat with a reduced number of polygons on a wooden table"
+            class="center_align" />
+        </div>
       </div>
+
       <!-- paper dragon description -->
       <!-- <div id="paper_dragon" class="project_description">
           <p class="margin_text">this should be about the paper dragon</p>
@@ -183,6 +214,9 @@
       </div>
     </div>
   </main>
+  <!-- fixed button "back to top" -->
+  <!-- <a href="#top" class="top_button">Back up</a> -->
+
 </body>
 
 </html>
