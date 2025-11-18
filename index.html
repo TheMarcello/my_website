@@ -32,19 +32,7 @@
 
   </header>
   <!-- <h1 class="title">My website</h1> -->
-  <!-- reference to back to the top button -->
-  <!-- <div id="top"></div> -->
   <main>
-    <!-- <button class="top_button" onclick="document.querySelector('.content').scrollTo(0,0)">
-      <img src="./Content/back_to_top_icon.svg" alt="" style="color: white;"></button> -->
-    <!-- svg button -->
-    <button class="top_button" onclick="document.querySelector('.content').scrollTo(0,0)">
-      <svg width="4rem" heigth="4rem" viewBox="0 0 4rem 4rem">
-        <path id="button_svg_path" class="top_button_svg"
-          d="M 175.4831,90.223457 A 84.968857,85.083992 0 0 1 90.514244,175.30745 84.968857,85.083992 0 0 1 5.5453873,90.223457 84.968857,85.083992 0 0 1 90.514244,5.1394653 84.968857,85.083992 0 0 1 175.4831,90.223457 Z M 45.10985,42.812256 c 29.818692,0 59.63738,0 89.45608,0 m -8.04082,69.905514 C 114.30506,97.551757 102.08501,82.385741 89.864953,67.219726 M 53.15067,112.71777 C 65.37072,97.551757 77.590775,82.385741 89.810827,67.219726" />
-      </svg>
-    </button>
-
     <!-- first row of carousel -->
     <div class="carousel_container">
       <ul class="carousel" role="list">
@@ -58,19 +46,19 @@
         <li>
           <div class="carousel_page">
             <a href="#donut_blender">
-              <img src="Content/donut_single_square_frame.png"
+              <img src="./Content/donut_single_square_frame.png"
                 alt="Computer generated image of a pink 3D donut, realized with Blender" />
             </a>
             <p class="page_caption">My first Blender project: a 3D donut</p>
           </div>
         </li>
-        <!-- paper cat -->
+        <!-- papercrafts -->
         <li>
           <div class="carousel_page">
             <a href="#papercraft">
-              <img src="Content/render_on_table.png" alt="Computer generated image of a black papercraft cat" />
+              <img src="./Content/render_on_table.png" alt="Computer render of a black papercraft cat" />
             </a>
-            <p class="page_caption">Papercraft cat</p>
+            <p class="page_caption">Low poly papercrafts</p>
           </div>
         </li>
         <!-- paper dragon -->
@@ -89,25 +77,30 @@
         <li>
           <div class="carousel_page">
             <a href="#flaming_sword">
-              <img src="Content/sword_screenshot.png"
+              <img src="./Content/sword_screenshot.png"
                 alt="Computer generated image of a flaming sword inside a rock, realized with Blender" />
             </a>
             <p class="page_caption">Blender flaming sword animation</p>
           </div>
         </li>
-        <!-- paper paddenstoel -->
-        <!-- <li>
-            <div class="carousel_page">
-              <a href="#paper_paddenstoel">
-                <img
-                  src="Content/paddenstoel.jpg"
-                  alt="Image a yellow and orange papercraft mushroom"
-                />
-              </a>
-              <p class="page_caption">Papercraft mushroom</p>
-            </div>
-          </li> -->
-
+        <!--my_website -->
+        <li>
+          <div class="carousel_page">
+            <a href="#my_website">
+              <img src="./Content/my_website_screenshot.png" alt="screenshot of the homepage of this website" />
+            </a>
+            <p class="page_caption">This website</p>
+          </div>
+        </li>
+        <!-- academic projects -->
+        <li>
+          <div class="carousel_page">
+            <a href="#academic_projects">
+              <img src="./Content/triangulation_random_walk.png" alt="Image a my new project" />
+            </a>
+            <p class="page_caption">Academic projects</p>
+          </div>
+        </li>
         <!-- TEMPLATE ITEM PAGE -->
         <!-- <li>
             <div class="carousel_page">
@@ -125,30 +118,42 @@
     <!-- these are going to be the pages for each project (order should not matter) -->
     <div class="content">
 
+      <!-- svg button -->
+      <button class="top_button" onclick="document.querySelector('.content').scrollTo(0,0)">
+        <svg width="3rem" height="3rem" viewBox="0 0 3rem 3rem">
+          <path id="button_svg_path" class="top_button_svg"
+            d="M 175.4831,90.223457 A 84.968857,85.083992 0 0 1 90.514244,175.30745 84.968857,85.083992 0 0 1 5.5453873,90.223457 84.968857,85.083992 0 0 1 90.514244,5.1394653 84.968857,85.083992 0 0 1 175.4831,90.223457 Z M 45.10985,42.812256 c 29.818692,0 59.63738,0 89.45608,0 m -8.04082,69.905514 C 114.30506,97.551757 102.08501,82.385741 89.864953,67.219726 M 53.15067,112.71777 C 65.37072,97.551757 77.590775,82.385741 89.810827,67.219726" />
+        </svg>
+      </button>
+
       <!-- blender donut description -->
       <div id="donut_blender" class="project_description">
         <p class="margin_text">
-          My very first Blender project! (What is Blender?) Created following a tutorial of the
+          My very first <span class="tooltip_text"
+            data-tooltip="Blender is an open source computer graphics program">Blender</span>
+          project! Created following a tutorial of the
           great
-          <a target="_blank"
-            href="https://www.youtube.com/watch?v=nIoXOplUvAw&list=PLjEaoINr3zgFX8ZsChQVQsuDSjEqdWMAD&index=1"
-            class="text_link fw-bold">
-            Blender Guru </a>.
+          <nobr>
+            <a target="_blank"
+              href="https://www.youtube.com/watch?v=nIoXOplUvAw&list=PLjEaoINr3zgFX8ZsChQVQsuDSjEqdWMAD&index=1"
+              class="text_link fw-bold">
+              Blender Guru</a>.
+          </nobr>
         </p>
         <p class="margin_text">
           I learned the basics concepts of Blender: the UI, Object/Edit modes, camera, lighting,
           modifiers, geometry nodes, textures, keyframes and animations.
         </p>
         <div class="center_align">
-          <video src="Content/final_video_donut_screenshot0001-0313.mp4" controls muted></video>
+          <video src="./Content/final_video_donut_screenshot0001-0313.mp4" controls muted></video>
         </div>
         <p class="margin_text center_align">The final animation:</p>
         <div class="center_align">
-          <video src="Content/donut_final_animation0001-0300.mp4" controls muted></video>
+          <video src="./Content/donut_final_animation0001-0300.mp4" controls muted></video>
         </div>
       </div>
 
-      <!-- paper cat description -->
+      <!-- papercraft description -->
       <div id="papercraft" class="project_description">
         <p class="margin_text">
           The origin of these papercrafts was
@@ -157,15 +162,17 @@
           on Instructables.com on how to create polygonal paper models from scratch (it also
           came with a ready-to-print pdf for a deer head trophy).
         </p>
-        <p class="margin_text">Starting from a 3D model:</p>
+        <p class="margin_text">Starting from a 3D model (which can be found on
+          <a target="_blank" href="https://www.thingiverse.com/" class="text_link">Thingiverse</a> or anywhere else on
+          the internet) :
+        </p>
         <div class="center_align">
           <img src="./Content/original_sleeping_cat.png" alt="3D model of a sleeping cat" class="center_align" />
         </div>
         <p class="margin_text">
-          (which can be found on
-          <a href="https://www.thingiverse.com/" class="text_link">Thingiverse</a> or anywhere else) the amount of
+          the amount of
           polygons has to be reduced to a few hundreds using Meshlab. (In the mean time I learned
-          some basics of Blender, so I replaced the (awful) Meshlab part.)
+          some basics of Blender, so I replaced the <del>awful</del> Meshlab part.)
         </p>
         <div class="center_align">
           <img src="./Content/low_poly_cat.png" alt="3D model of a sleeping cat with a reduced number of polygons"
@@ -177,30 +184,69 @@
             alt="3D render of a sleeping cat with a reduced number of polygons on a wooden table"
             class="center_align" />
         </div>
-        <p class="margin_text">Then, using <a href="https://pepakura.tamasoft.co.jp/pepakura_designer/"
+        <p class="margin_text">Then, using <a target="_blank" href="https://pepakura.tamasoft.co.jp/pepakura_designer/"
             class="text_link">Pepakura</a>, the
-          model can be unfolded and made into pdf [add downloadable link] to be printed, and finally cut and glued
-          together (which is the hardest and most time consuming part).</p>
+          model can be unfolded and made <a href="./Content/sleeping_cat_v0.2.pdf" class="text_download">into a file</a>
+          to be
+          printed, and finally cut and glued
+          together &mdash; the hardest and most time consuming part.</p>
         <div class="center_align">
           <img src="./Content/paper_cat_crop.jpg"
             alt="3D render of a sleeping cat with a reduced number of polygons on a wooden table"
             class="center_align" />
         </div>
+        <p class="margin_text center_align"> Here is another one I made:</p>
+        <img src="./Content/" alt="">
+
       </div>
 
       <!-- paper dragon description -->
       <!-- <div id="paper_dragon" class="project_description">
           <p class="margin_text">this should be about the paper dragon</p>
         </div> -->
+
       <!-- flaming sword description -->
       <div id="flaming_sword" class="project_description">
         <p class="margin_text">this should be about the flaming sword</p>
       </div>
 
-      <!-- paper paddenstoel description -->
-      <!-- <div id="paper_paddenstoel" class="project_description">
-          <p class="margin_text">this should be about the paper mushroom</p>
-        </div> -->
+      <!-- my website description -->
+      <div id="my_website" class="project_description">
+        <p class="margin_text">
+          I am currently learning <code class="snippet">html</code> and
+          <code class="snippet">CSS</code>, and this website is the result.
+          Hosted on
+          <a target="_blank" href="https://github.com/TheMarcello/my_website" class="text_link">GitHub</a> Pages, along
+          with
+          the source code.
+        </p>
+      </div>
+
+      <!-- academic projects description -->
+      <div id="academic_projects" class="project_description">
+        <ul>
+          <li>
+            <h2 class="fw-bold fs-medium">Master thesis</h2>
+            <img src="./Content/LGAD_efficiency_LR.png" alt="" class="float_image">
+            <p class="margin_text">
+
+              I analyzed and characterized prototype silicon sensors that will be part of a <span class="tooltip_text"
+                data-tooltip="the High Granularity Timing Detector">new sub-detector</span> inside of
+              the <a target="_blank" href="https://atlas.cern/" class="text_link">ATLAS experiment</a> at CERN. <br>
+              If you are interested you can read my Thesis <a
+                href="./Content/Thesis_test_beam_analysis_for_HGTD_compressed.pdf" class="text_download">here</a>.
+              <!-- , or the code base on GitHub -->
+            </p>
+          </li>
+          <li>
+            <h2 class="fw-bold fs-medium">Monte Carlo techniques</h2>
+            <p class="margin_text">
+
+            </p>
+          </li>
+        </ul>
+
+      </div>
 
       <!-- new item description -->
       <!-- <div id="new_item" class="project_description">
@@ -212,6 +258,7 @@
         <p class="fs-large margin_text">Welcome to my website!</p>
         <p>(work in progress &#128679;)</p>
       </div>
+
     </div>
   </main>
   <!-- fixed button "back to top" -->
