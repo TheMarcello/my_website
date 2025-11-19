@@ -262,6 +262,9 @@ ul.carousel img {
 .picture_column img {
   width: 300px;
 }
+.small_margin {
+  margin: .5rem;
+}
 
 .snippet {
   /* code snippet */
