@@ -1,115 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="with=device-widht, initial-scale=1.0" />
-    <title>Marcello Pozzessere</title>
-    <link
-      rel="icon"
-      type="image/x-icon"
-      href="./Content/donut_icon (32x32).ico"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Lexend+Exa&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="style.css" />
-  </head>
 
-  <body class="body">
-    <!-- navigation bar -->
-    <header>
-      <div class="name_in_head fw-bold">
-        <a href="./index.html">Marcello Pozzessere</a>
-      </div>
-      <div class="nav_bar_container">
-        <nav role="list">
-          <ul class="nav_list">
-            <li><a href="#">Home</a></li>
-            <li><a href="./about_me.html">About</a></li>
-            <li>
-              <a href="mailto:pozzessere.marcello@gmail.com">Contact me</a>
-            </li>
-          </ul>
-        </nav>
-      </div>
-    </header>
-    <!-- <h1 class="title">My website</h1> -->
-    <main>
-      <!-- first row of carousel -->
-      <div class="carousel_container">
-        <ul class="carousel" role="list">
-          <!-- first page -->
-          <li>
-            <div class="carousel_page first_page center_align">
-              <p class="page_caption">Personal projects</p>
-            </div>
-          </li>
-          <!-- blender donut -->
-          <li>
-            <div class="carousel_page">
-              <a href="#donut_blender">
-                <img
-                  src="Content/donut_single_square_frame.png"
-                  alt="Computer generated image of a pink 3D donut, realized with Blender"
-                />
-              </a>
-              <p class="page_caption">My first Blender project: a 3D donut</p>
-            </div>
-          </li>
-          <!-- paper cat -->
-          <li>
-            <div class="carousel_page">
-              <a href="#paper_cat">
-                <img
-                  src="Content/render_on_table.png"
-                  alt="Computer generated image of a black papercraft cat"
-                />
-              </a>
-              <p class="page_caption">Papercraft cat</p>
-            </div>
-          </li>
-          <!-- paper dragon -->
-          <li>
-            <div class="carousel_page">
-              <a href="#paper_dragon">
-                <img
-                  src="Content/paper_dragon_2.png"
-                  alt="Computer generated image of a low poly dragon in a frame on a wall, realized with Blender"
-                />
-              </a>
-              <p class="page_caption">Papercraft dragon (to be made)</p>
-            </div>
-          </li>
-          <!-- flaming sword -->
-          <li>
-            <div class="carousel_page">
-              <a href="#flaming_sword">
-                <img
-                  src="Content/sword_screenshot.png"
-                  alt="Computer generated image of a flaming sword inside a rock, realized with Blender"
-                />
-              </a>
-              <p class="page_caption">Blender flaming sword animation</p>
-            </div>
-          </li>
-          <!-- paper paddenstoel -->
-          <li>
-            <div class="carousel_page">
-              <a href="#paper_paddenstoel">
-                <img
-                  src="Content/paddenstoel.jpg"
-                  alt="Image a yellow and orange papercraft mushroom"
-                />
-              </a>
-              <p class="page_caption">Papercraft mushroom</p>
-            </div>
-          </li>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="with=device-widht, initial-scale=1.0" />
+  <title>Marcello Pozzessere</title>
+  <link rel="icon" type="image/x-icon" href="./Content/donut_icon (32x32).ico" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lexend+Exa&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
 
-          <!-- TEMPLATE ITEM PAGE -->
-          <!-- <li>
+<body class="body">
+  <!-- navigation bar -->
+  <header>
+    <div class="name_in_head fw-bold">
+      <a href="./index.html">Marcello Pozzessere</a>
+    </div>
+    <div class="nav_bar_container">
+      <nav role="list">
+        <ul class="nav_list">
+          <li><a href="#">Home</a></li>
+          <li><a href="./about_me.html">About me</a></li>
+          <li>
+            <a href="mailto:pozzessere.marcello@gmail.com">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+  </header>
+  <!-- <h1 class="title">My website</h1> -->
+  <main>
+    <!-- first row of carousel -->
+    <div class="carousel_container">
+      <ul class="carousel" role="list">
+        <!-- first page -->
+        <li>
+          <div class="carousel_page first_page center_align">
+            <p class="page_caption first_caption">Personal projects:</p>
+          </div>
+        </li>
+        <!-- blender donut -->
+        <li>
+          <div class="carousel_page">
+            <a href="#donut_blender">
+              <img src="./Content/donut_single_square_frame.png"
+                alt="Computer generated image of a pink 3D donut, realized with Blender" />
+            </a>
+            <p class="page_caption">My first Blender project: a 3D donut</p>
+          </div>
+        </li>
+        <!-- flaming sword -->
+        <li>
+          <div class="carousel_page">
+            <a href="#flaming_sword">
+              <img src="./Content/sword_screenshot.png"
+                alt="Computer generated image of a flaming sword inside a rock, realized with Blender" />
+            </a>
+            <p class="page_caption">Other Blender projects</p>
+          </div>
+        </li>
+        <!-- papercrafts -->
+        <li>
+          <div class="carousel_page">
+            <a href="#papercraft">
+              <img src="./Content/paddenstoel_LR.jpg"
+                alt="Yellow and orange papercraft mushroom with small arms and legs" />
+            </a>
+            <p class="page_caption">Low poly papercrafts</p>
+          </div>
+        </li>
+        <!--my_website -->
+        <li>
+          <div class="carousel_page">
+            <a href="#my_website">
+              <img src="./Content/my_website_screenshot.png" alt="screenshot of the homepage of this website" />
+            </a>
+            <p class="page_caption">This website</p>
+          </div>
+        </li>
+        <!-- academic projects -->
+        <li>
+          <div class="carousel_page">
+            <a href="#academic_projects">
+              <img src="./Content/triangulation_random_walk.png" alt="Image a my new project" />
+            </a>
+            <p class="page_caption">Academic projects</p>
+          </div>
+        </li>
+        <!-- TEMPLATE ITEM PAGE -->
+        <!-- <li>
             <div class="carousel_page">
               <a href="#new_element">
                 <img
@@ -120,71 +102,181 @@
               <p class="page_caption">Short caption of the new project</p>
             </div>
           </li> -->
-        </ul>
-      </div>
-      <!-- these are going to be the pages for each project (order should not matter) -->
-      <div class="content">
-        <!-- blender donut description -->
-        <div id="donut_blender" class="project_description">
-          <p class="margin_text">
-            My very first Blender project! (What is Blender?) Created following
-            a tutorial of the great
-            <a
-              target="_blank"
+      </ul>
+    </div>
+    <!-- these are going to be the pages for each project (order should not matter) -->
+    <div class="content">
+
+      <!-- svg button -->
+      <button class="top_button" onclick="document.querySelector('.content').scrollTo(0,0)">
+        <svg width="3rem" height="3rem" viewBox="0 0 3rem 3rem">
+          <path id="button_svg_path" class="top_button_svg"
+            d="M 175.4831,90.223457 A 84.968857,85.083992 0 0 1 90.514244,175.30745 84.968857,85.083992 0 0 1 5.5453873,90.223457 84.968857,85.083992 0 0 1 90.514244,5.1394653 84.968857,85.083992 0 0 1 175.4831,90.223457 Z M 45.10985,42.812256 c 29.818692,0 59.63738,0 89.45608,0 m -8.04082,69.905514 C 114.30506,97.551757 102.08501,82.385741 89.864953,67.219726 M 53.15067,112.71777 C 65.37072,97.551757 77.590775,82.385741 89.810827,67.219726" />
+        </svg>
+      </button>
+
+      <!-- blender donut description -->
+      <div id="donut_blender" class="project_description">
+        <p class="margin_text">
+          My very first <span class="tooltip_text"
+            data-tooltip="Blender is an open source computer graphics program">Blender</span>
+          project! Created following a tutorial of the
+          great
+          <nobr>
+            <a target="_blank"
               href="https://www.youtube.com/watch?v=nIoXOplUvAw&list=PLjEaoINr3zgFX8ZsChQVQsuDSjEqdWMAD&index=1"
-              class="text_link fw-bold"
-              >Blender Guru</a
-            >.
-          </p>
-          <p class="margin_text">
-            I learned the basics concepts of Blender: the UI, Object/Edit modes,
-            camera, lighting, modifiers, geometry nodes, textures, keyframes and
-            animations.
-          </p>
-          <div class="center_align">
-            <video
-              src="Content/final_video_donut_screenshot0001-0313.mp4"
-              controls
-              muted
-            ></video>
-          </div>
-          <p class="margin_text center_align">The final animation:</p>
-          <div class="center_align">
-            <video
-              src="Content/donut_final_animation0001-0300.mp4"
-              controls
-              muted
-            ></video>
-          </div>
+              class="text_link fw-bold">
+              Blender Guru</a>.
+          </nobr>
+        </p>
+        <p class="margin_text">
+          I learned the basics concepts of Blender: the UI, Object/Edit modes, camera, lighting,
+          modifiers, geometry nodes, textures, keyframes and animations.
+        </p>
+        <div class="center_align ">
+          <video src="./Content/final_video_donut_screenshot0001-0313.mp4" class="min_width" controls muted></video>
         </div>
-        <!-- paper dragon description -->
-        <div id="paper_dragon" class="project_description">
-          <p class="margin_text">this should be about the paper dragon</p>
+        <p class="margin_text center_align">The final animation:</p>
+        <div class="center_align">
+          <video src="./Content/donut_final_animation0001-0300.mp4" class="min_width" controls muted></video>
         </div>
-        <!-- flaming sword description -->
-        <div id="flaming_sword" class="project_description">
-          <p class="margin_text">this should be about the flaming sword</p>
+      </div>
+
+      <!-- papercraft description -->
+      <div id="papercraft" class="project_description">
+        <p class="margin_text">
+          The origin of these papercrafts was
+          <a target="_blank" href="https://www.instructables.com/Create-faceted-paper-objects/" class="text_link">this
+            post</a>
+          on Instructables.com on how to create polygonal paper models from scratch (it also
+          came with a ready-to-print pdf for a deer head trophy).
+        </p>
+        <p class="margin_text">Starting from a 3D model (which can be found on
+          <a target="_blank" href="https://www.thingiverse.com/" class="text_link">Thingiverse</a> or anywhere else on
+          the internet) :
+        </p>
+        <div class="center_align">
+          <img src="./Content/original_sleeping_cat.png" alt="3D model of a sleeping cat" class="min_width" />
         </div>
-        <!-- paper dragon description -->
-        <div id="paper_cat" class="project_description">
-          <p class="margin_text">this should be about the paper cat</p>
+        <p class="margin_text">
+          the amount of
+          polygons has to be reduced to a few hundreds using Meshlab. (In the mean time I learned
+          some basics of Blender, so I replaced the <del>awful</del> Meshlab part.)
+        </p>
+        <div class="center_align">
+          <img src="./Content/low_poly_cat.png" alt="3D model of a sleeping cat with a reduced number of polygons"
+            class="min_width" />
         </div>
-        <!-- paper dragon description -->
-        <div id="paper_paddenstoel" class="project_description">
-          <p class="margin_text">this should be about the paper mushroom</p>
+        <p class="center_align margin_text">render for illustration purposes only:</p>
+        <div class="center_align">
+          <img src="./Content/render_on_table.png"
+            alt="3D render of a sleeping cat with a reduced number of polygons on a wooden table" class="min_width" />
+        </div>
+        <p class="margin_text">Then, using <a target="_blank" href="https://pepakura.tamasoft.co.jp/pepakura_designer/"
+            class="text_link">Pepakura</a>, the
+          model can be unfolded and made <a href="./Content/sleeping_cat_v0.2.pdf" class="text_download">into a file</a>
+          to be
+          printed, and finally cut and glued
+          together &mdash; the hardest and most time consuming part.</p>
+        <div class="center_align">
+          <img src="./Content/paper_cat_crop.jpg"
+            alt="3D render of a sleeping cat with a reduced number of polygons on a wooden table" class="min_width" />
+        </div>
+        <p class="margin_text center_align"> Here is another one I made:</p>
+        <div class="center_align">
+          <img src="./Content/paddenstoel_LR.jpg" alt="todo" class="min_width">
+        </div>
+        <p class="margin_text center_align">Along with a timelapse of the assembly:</p>
+        <div class="center_align ">
+          <video src="./Content/paddenstoel_time_lapse.mp4" class="min_width" controls muted></video>
+        </div>
+        <p class="margin_text">Currently working on an even bigger one (which exists ony digitally for now):</p>
+        <div class="center_align">
+          <img src="./Content/dragon_frame.png" alt="todo" class="min_width">
         </div>
 
-        <!-- new item description -->
-        <!-- <div id="new_item" class="project_description">
+      </div>
+
+      <!-- flaming sword description -->
+      <div id="flaming_sword" class="project_description">
+        <p class="center_align margin_text">coming soon &#128679;</p>
+      </div>
+
+      <!-- my website description -->
+      <div id="my_website" class="project_description">
+        <p class="margin_text">
+          I am currently learning <code class="snippet">html</code> and
+          <code class="snippet">CSS</code>, and this website is the result.
+          Hosted on
+          <a target="_blank" href="https://github.com/TheMarcello/my_website" class="text_link">GitHub</a> Pages, along
+          with the source code. Expect frequent changes. <br> I migh learn Javascript another day.
+        </p>
+      </div>
+
+      <!-- academic projects description -->
+      <div id="academic_projects" class="project_description">
+        <ul>
+          <!-- master thesis -->
+          <li class="li_with_picture">
+            <img src="./Content/LGAD_efficiency_LR.png" alt="todo" class="float_image">
+            <h2 class="fw-bold fs-medium">Master thesis</h2>
+            <h3 class="italic">High energy physics</h3>
+            <p class="margin_text">
+              I analyzed and characterized prototype silicon sensors that will be the main active elements of a <span
+                class="tooltip_text" data-tooltip="the High Granularity Timing Detector">new sub-detector</span> inside
+              of the
+              <a target="_blank" href="https://atlas.cern/" class="text_link">ATLAS experiment</a> at CERN. <br>
+              If you are interested you can read my thesis <a
+                href="./Content/Thesis_test_beam_analysis_for_HGTD_compressed.pdf" class="text_download">here</a>.
+              <!-- , or the code base on GitHub -->
+            </p>
+            <footer class="tools_project_footer">Tools: Python, NumPy, Pandas, C++, ROOT</footer>
+          </li>
+          <!-- monte carlo techniques -->
+          <li class="li_with_picture">
+            <img src="./Content/small_triangulation_random_walk.png" alt="todo" class="float_image">
+            <h2 class="fw-bold fs-medium">Monte Carlo techniques</h2>
+            <h3 class="italic">Computational physics</h3>
+            <p class="margin_text"> In this course we practiced a few <span class="tooltip_text"
+                data-tooltip="computational algorithms that rely on repeated random sampling">Monte Carlo
+                methods</span> (Monte Carlo integration, Markov chains and others). <br>
+              In our final project I implemented random walks on random <span class="tooltip_text"
+                data-tooltip="a subdivision of a planar object into triangles">triangulations</span> to estimate the
+              spectral dimension of a 2-dimensional discretization of space. <br>
+            </p>
+            <footer class="tools_project_footer">Tools: Python, NumPy, matplotlib</footer>
+          </li>
+          <!-- machine learning for particle physics -->
+          <li class="li_with_picture">
+            <img src="./Content/mass_prediction.jpg" alt="todo" class="float_image">
+            <h2 class="fw-bold fs-medium">Machine learning in particle physics</h2>
+            <h3 class="italic">ML and simulations</h3>
+            <p class="margin_text"> After generating data of simulated particle collisions, we trained a regressional
+              neural network to predict the mass of a hypothetical particle and a <a target="_blank"
+                href="https://en.wikipedia.org/wiki/Variational_autoencoder" class="text_link">variational
+                autoencoder</a> to simulate the events.
+            </p>
+            <footer class="tools_project_footer">Tools: Python, tensorflow, scikit-learn </footer>
+          </li>
+        </ul>
+      </div>
+
+      <!-- new item description -->
+      <!-- <div id="new_item" class="project_description">
           <p class="margin_text">this should be about the new project</p>
         </div> -->
 
-        <!-- HOME PAGE content (has to be later)-->
-        <div id="home_page" class="project_description home_page center_align">
-          <p class="fs-large margin_text">Welcome to my website!</p>
-          <p>(work in progress &#128679;)</p>
-        </div>
+      <!-- HOME PAGE content (has to be later)-->
+      <div id="home_page" class="project_description home_page center_align">
+        <p class="fs-large margin_text">Welcome to my website!</p>
+        <p>(work in progress &#128679;)</p>
       </div>
-    </main>
-  </body>
+
+    </div>
+  </main>
+  <!-- fixed button "back to top" -->
+  <!-- <a href="#top" class="top_button">Back up</a> -->
+
+</body>
+
 </html>
