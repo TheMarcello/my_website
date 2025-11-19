@@ -307,7 +307,7 @@ ul.carousel img {
 .project_description {
   justify-content: center;
   display: none;
-  margin-bottom: 4rem;
+  /* margin-bottom: 4rem; */
   padding: 2rem;
 }
 .project_description:target {
@@ -328,28 +328,31 @@ ul.carousel img {
     opacity: 0;
   }
 } */
+.li_with_picture {
+  overflow: hidden;
+  margin-bottom: 2rem;
+}
+.tools_project_footer {
+  font-style: italic;
+  margin-left: 2rem;
+  line-height: 1rem;
+}
+
 .min_width {
   width: 80%;
   min-width: 400px;
-  height: auto;
+  max-width: 800px;
+  min-height: 200px;
   max-height: 80dvh;
-}
-/* .project_description video {
-  width: 80%;
-  min-width: 400px;
   height: auto;
-  max-height: 80dvh;
+  object-fit: contain;
 }
-.project_description img {
-  width: 80%;
-  min-width: 400px;
-  height: auto;
-  max-height: 80dvh; 
-} */
 .float_image {
   height: 250px;
+  max-width: 50%;
   /* min-width: 100px; */
   float: right;
+  vertical-align: top;
   object-fit: scale-down;
 }
 
@@ -368,7 +371,7 @@ ul.carousel img {
   content: attr(data-tooltip);
   border: 1px solid var(--color-accent-100);
   border-radius: 1rem;
-  background: transparent;
+  background: rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(5px);
   padding: 0.25rem;
   transition: opacity 0s linear 0.3s;
@@ -376,10 +379,13 @@ ul.carousel img {
   z-index: 1;
 }
 
+/* custom classes so I can assign properties easily */
+.italic {
+  font-style: italic;
+}
 .center_align {
   text-align: center;
 }
-/* custom classe so I can assign properties easily */
 .fw-regular {
   font-weight: var(--font-weight-regular);
 }
@@ -424,7 +430,7 @@ ul.carousel img {
   }
 }
 /* adapting for mobile */
-@media (max-width: 1000px) {
+@media (max-width: 1024px) {
   main {
     display: block;
     /* flex-direction: column; */
