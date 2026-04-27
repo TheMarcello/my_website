@@ -416,7 +416,7 @@ ul.carousel img {
 .fs-medium {
   font-size: var(--font-size-highlight);
 }
-
+/* 
 @keyframes gradient {
   0% {
     background-position: 0% 50%;
@@ -427,7 +427,7 @@ ul.carousel img {
   100% {
     background-position: 0% 50%;
   }
-}
+} */
 
 /* to reduce the animations */
 @media (prefers-reduced-motion: reduce) {
