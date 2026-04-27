@@ -298,7 +298,7 @@ ul.carousel img {
   width: 1rem;
   background-size: 1rem 1rem;
   background-color: currentcolor;
-  mask-image: url(Content/open-in-new-tab.svg);
+  mask-image: url(./Icons/open-in-new-tab.svg);
   mask-size: cover;
   mask-repeat: no-repeat;
 }
@@ -307,14 +307,14 @@ ul.carousel img {
   color: var(--color-accent-100);
 }
 .text_download[href$=".pdf"]::after {
-  /* content: " " url(Content/pdf_file.svg) / "download PDF"; */
+  /* content: " " url("./Icons/pdf_file.svg) / "download PDF"; */
   content: "" / "pdf file";
   display: inline-block;
   height: 1rem;
   width: 1rem;
   background-size: 1rem 1rem;
   background-color: currentcolor;
-  mask-image: url(Content/teenyicons--pdf-outline.svg);
+  mask-image: url(./Icons/teenyicons--pdf-outline.svg);
   mask-size: cover;
   mask-repeat: no-repeat;
 }
