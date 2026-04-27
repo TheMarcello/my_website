@@ -56,13 +56,18 @@ body {
   font-family: var(--font-family-body);
   font-size: var(--font-size-body);
   /* animated shifting background with color gradient */
-  background: linear-gradient(-30deg, var(--color-background-100), var(--color-background-300));
+  background-color: black;
+  background-image: url("./Content/Webb_s_first_deep_field_LR.png");
+  /* background: linear-gradient(-30deg, var(--color-background-100), var(--color-background-300));
   background-size: 400% 400%;
-  animation: gradient 15s ease infinite;
+  animation: gradient 15s ease infinite; */
   background-repeat: no-repeat;
-  background-attachment: fixed;
-  height: 100%;
+  background-size: cover;
+  /* background-attachment: fixed; */
+  width: 100%;
+
   overflow: hidden; /* there was a weird vertical scroll */
+  /* z-index: 100; */
 }
 
 header {
@@ -274,7 +279,9 @@ ul.carousel img {
 .margin_text {
   margin: 2rem;
 }
-
+.italic_text {
+  font-style: italic;
+}
 .text_link {
   color: var(--color-accent-100);
 }
@@ -404,6 +411,7 @@ ul.carousel img {
 .fs-medium {
   font-size: var(--font-size-highlight);
 }
+
 @keyframes gradient {
   0% {
     background-position: 0% 50%;
