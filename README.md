@@ -11,6 +11,7 @@ at https://themarcello.github.io/my_website/
 - [x] hover effect on the navbar
 - [ ] robot.txt
 - [ ] group together papercraft
-- [ ] university projects
-- [ ] back to top button
+- [x] university projects
+- [x] back to top button
+- [ ] reorganize content
 - [ ]
